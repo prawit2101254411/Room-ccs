@@ -1,0 +1,247 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  font-family: sans-serif;
+}
+.mian-contailner {
+  display: flex;
+  width: 100%;
+}
+
+/* Homepage 1  */
+
+/* ส่วนค้านเท้นด้านบน */
+.container01 {
+  display: grid;
+  grid-template-columns: minmax(100px, 6fr) minmax(200px, 5fr);
+  height: 65%;
+}
+
+/* ส่วนคอนเท้นด้นบ้าน ซ้าย */
+.container01-box01 {
+  position: relative;
+  width: 840px;
+  height: 100%;
+  object-fit: cover;
+  animation: transitionIn 1s;
+  /* border: 1px solid red; */
+}
+.image-background-navbar{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+@keyframes transitionIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.navbar {
+  display: flex;
+  align-items: baseline;
+  z-index: 10;
+  gap: 30px;
+  margin-top: 50px;
+  margin-left: 50px;
+  color: white;
+  /* border: 1px solid black; */
+}
+.hamburger{
+  display: none;
+  width: 100px;
+}
+.nav {
+  position: relative;
+  z-index: 1;
+}
+
+/* ส่วนคอนเท้นด้นบ้าน ขวา */
+.container01-box02 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 680px;
+  height: 100%;
+  margin-left: 6px;
+  /* border: 1px solid black; */
+}
+.text-top-home01 {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  gap: 20px;
+  width: 60%;
+  height: 70%;
+  animation: textunder 1s;
+
+}
+.text-top-home01 > h1 {
+  font-size: 40px;
+}
+.text-top-home01 > p {
+  color: rgb(158, 158, 158);
+}
+.shop-now {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.svg-shop-now {
+  width: 40px;
+}
+.text-top-home01 > div > a {
+  text-decoration: none;
+  letter-spacing: 17px;
+  color: rgb(158, 158, 158);
+}
+.go-back {
+  display: flex;
+  align-items: end;
+  margin-top: auto;
+  width: 100%;
+  height: 100px;
+}
+.svg-go-back {
+  width: auto;
+  height: 40%;
+}
+.btn-go {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  background-color: rgb(49, 49, 49);
+}
+.btn-go:hover{
+  background-color: rgb(114, 114, 114);
+}
+.btn-back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  background-color: rgb(49, 49, 49);
+}
+.btn-back:hover{
+  background-color: rgb(114, 114, 114);
+}
+/* ส่วนค้านเท้นด้านล่าง */
+.container02 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: auto;
+  /* border: 1px solid red; */
+}
+.text-top-home02 {
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  justify-content: center;
+  gap: 20px;
+}
+.text-top-home02 > p {
+  color: rgb(161, 161, 161);
+  animation: textunder 1s;
+}
+@keyframes textunder {
+  from{
+    margin-top: -600px;
+  }
+  to{
+    margin-top: 0px;
+  }
+}
+.image-about-dark {
+  height: 100%;
+  animation: transitionIn 1s;
+}
+.image-about-light {
+  height: 100%;
+  animation: transitionIn 1s;
+}
+
+/* respontsive */
+@media (max-width: 1300px) {
+  .container01 {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+  .container02 {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+  .image-about-dark {
+    width: 100%;
+  }
+  .image-about-light {
+    width: 100%;
+  }
+  .container01-box01 {
+    object-fit: cover;
+    width: 100%;
+    height: 600px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  .container01-box02 {
+    width: 100%;
+  }
+}
+@media (max-width: 450px) {
+  .container01 {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+  .container02 {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+  .image-about-dark {
+    width: 100%;
+  }
+  .image-about-light {
+    width: 100%;
+  }
+  .container01-box01 {
+    object-fit: cover;
+    width: 100%;
+    height: 600px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  .container01-box02 {
+    width: 100%;
+  }
+  .nav{
+    display: none;
+  }
+  .navbar > h1 {
+    /* border: 1px solid red; */
+    margin-left: 50px;
+  }
+  .navbar{
+    align-items: center;
+    margin: 0;
+    margin-top: 20px;
+  }
+  .hamburger{
+    display: flex;
+  }
+}
